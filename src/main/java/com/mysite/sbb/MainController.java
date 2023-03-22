@@ -12,4 +12,11 @@ public class MainController {
     public String index(){
         return "안녕하세요";
     }
+
+    //redirect:<URL> - URL로 리다이렉트 (리다이렉트는 완전히 새로운 URL로 요청이 된다.)
+    //forward:<URL> - URL로 포워드 (포워드는 기존 요청 값들이 유지된 상태로 URL이 전환된다.)
+    @GetMapping("/")
+    public String root(){
+        return "redirect:/question/list";
+    }
 }
